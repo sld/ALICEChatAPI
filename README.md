@@ -1,4 +1,4 @@
-Chatbot
+aichat
 =======
 
 Uses the ALICE AIML to run a chatbot in Flask.
