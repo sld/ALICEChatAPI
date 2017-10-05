@@ -12,3 +12,16 @@ Inspired by/based on [Justin Huang's chatbot](https://github.com/jstnhuang/chatb
 > The chatbot is based on the free [Alice AIML](https://code.google.com/p/aiml-en-us-foundation-alice/) set.
 
 > Google Translate is unofficially used to synthesize voices from text. [SoX](http://sox.sourceforge.net/) is used to convert the sound file.
+
+
+# Requirements
+
+- python 3
+
+# Installation
+
+- pip install -r requirements.txt
+
+# Running
+
+- python ai.py
