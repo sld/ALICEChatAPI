@@ -22,6 +22,9 @@ class Chatbot():
     response = self._kernel.respond(input)
     return response
 
+  def reset(self):
+    self._kernel.resetBrain()
+
 
 def main():
   chatbot = Chatbot()

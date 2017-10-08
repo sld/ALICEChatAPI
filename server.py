@@ -1,19 +1,20 @@
 #!/usr/bin/env python
 
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from flask import render_template
 import ai
 
 app = Flask(__name__)
 
-@app.route("/")
-def home():
-    return app.send_static_file('index.html')
 
 @app.route("/respond", methods=['POST'])
 def respond():
-    bot.speakResponse(request.form['input'])
-    return app.send_static_file('index.html')
+    # bot.reset() not work
+    user_sentences = request.json['sentences']
+    print(user_sentences)
+    for s in user_sentences:
+        response = bot.respond(s).replace("\n", "")
+    return jsonify({'message': response})
 
 if __name__ == '__main__':
     bot = ai.Chatbot()
